@@ -1,0 +1,294 @@
+/* Basic Formatting */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(174, 229, 240);
+  background-image: radial-gradient(rgb(255, 234, 246) 5%, transparent 5%), radial-gradient(rgb(226, 255, 245) 5%, transparent 5%);
+  background-position: 0 0, 200px 200px;
+  background-size: 400px 400px;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: ofelia-text, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 4vw;
+}
+
+h2 {
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7vw;
+}
+
+h3 {
+  font-family: ofelia-text, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3vw;
+}
+
+/* Introduction */
+.introduction {
+  width: 95vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction h1 {
+  margin: 30px;
+}
+
+.introduction h2 {
+  padding-bottom: 30px;
+  width: 70vw;
+  text-align: center;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 172, 237);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(67, 124, 157);
+}
+
+/* Text Styling */
+.header1 {
+  color: rgb(255, 172, 237);
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  border: 5px white double;
+}
+
+.subheader1 {
+  color: rgb(67, 124, 157);
+}
+
+/* Scroll Down Arrow */
+.arrow-down {
+  background: none;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 85px solid rgb(255, 172, 237);
+  border-bottom: none;
+  animation: bounce 1.7s infinite ease-in-out;
+  transition: 0.3s;
+}
+
+@keyframes bounce {
+  0% {
+    margin-top: 10px;
+  }
+
+  50% {
+    margin-top: 30px;
+  }
+
+  100% {
+    margin-top: 10px;
+  }
+}
+
+.arrow-down:hover {
+  border-top: 85px solid white;
+  cursor: pointer;
+}
+
+/* Grid */
+.grid {
+  margin-top: 110%;
+  margin-left: 15%;
+  max-width: 70%;
+  padding-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.column {
+  flex: 100%;
+  max-width: 100%;
+  padding-right: 10px;
+}
+
+.column img {
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 50%;
+  transition: 0.3s ease;
+  background-color: rgb(255, 172, 237);
+}
+
+.container:hover .overlay {
+  opacity: 100%;
+}
+
+.text {
+  color: white;
+  background-color: rgb(255, 172, 237);
+  font-family: ofelia-text, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4vw;
+  line-height: 4vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 100%;
+  z-index: 9;
+}
+
+/* Media Queries */
+/* Tablet Styles */
+@media only screen and (min-width: 480px) {
+  body {
+    background-color: rgb(174, 229, 240);
+    background-image: radial-gradient(rgb(255, 234, 246) 5%, transparent 5%), radial-gradient(rgb(226, 255, 245) 5%, transparent 5%);
+    background-position: 0 0, 150px 150px;
+    background-size: 300px 300px;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+
+  .column {
+    flex: 50%;
+    padding: 10px;
+    padding-top: 20px;
+  }
+
+  .row {
+    padding-bottom: 0px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .arrow-down {
+    background: none;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 60px solid rgb(255, 172, 237);
+    border-bottom: none;
+    animation: bounce 1.7s infinite ease-in-out;
+  }
+
+  .arrow-down:hover {
+    border-top: 60px solid white;
+    cursor: pointer;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: rgb(174, 229, 240);
+    background-image: radial-gradient(rgb(255, 234, 246) 5%, transparent 5%), radial-gradient(rgb(226, 255, 245) 5%, transparent 5%);
+    background-position: 0 0, 200px 200px;
+    background-size: 400px 400px;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+
+  .column {
+    flex: 33.3%;
+    padding: 25px;
+  }
+
+  .row {
+    padding-bottom: 0px;
+  }
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  .arrow-down {
+    background: none;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 85px solid rgb(255, 172, 237);
+    border-bottom: none;
+    animation: bounce 1.7s infinite ease-in-out;
+    transition: 0.3s;
+  }
+
+  .arrow-down:hover {
+    border-top: 85px solid white;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,257 @@
+/* Basic Formatting */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(174, 229, 240);
+  background-image: radial-gradient(rgb(255, 234, 246) 5%, transparent 5%), radial-gradient(rgb(226, 255, 245) 5%, transparent 5%);
+  background-position: 0 0, 200px 200px;
+  background-size: 400px 400px;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: ofelia-text, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 4vw;
+}
+
+
+h2 {
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7vw;
+}
+
+h3 {
+  font-family: ofelia-text, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+iframe {
+  position: relative;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 172, 237);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(67, 124, 157);
+}
+
+/* Introduction */
+.introduction {
+  width: 95vw;
+  height: 100vh;
+  position: absolute;
+  top: 10vw;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introduction h1 {
+  margin: 30px;
+}
+
+.introduction h2 {
+  padding-bottom: 30px;
+  width: 70vw;
+  text-align: center;
+}
+
+/* Text Styling */
+.header1 {
+  color: rgb(255, 172, 237);
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  border: 5px white double;
+}
+
+.subheader1 {
+  color: rgb(67, 124, 157);
+}
+
+.link {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 172, 237);
+}
+
+/* Nav Bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(67, 124, 157);
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(255, 234, 246);
+}
+
+.active {
+  background-color: rgb(255, 172, 237);
+}
+
+/* Grid */
+.grid {
+  margin-top: 30vw;
+  margin-left: 15%;
+  max-width: 67%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 7px;
+}
+
+.column {
+  flex: 100%;
+  max-width: 100%;
+  padding-right: 7px;
+}
+
+.column img {
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-text {
+  color: rgb(67, 124, 157);
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+/* Media Queries */
+/* Tablet Styles */
+@media only screen and (min-width: 480px) {
+  body {
+    background-color: rgb(174, 229, 240);
+    background-image: radial-gradient(rgb(255, 234, 246) 5%, transparent 5%), radial-gradient(rgb(226, 255, 245) 5%, transparent 5%);
+    background-position: 0 0, 150px 150px;
+    background-size: 300px 300px;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+
+  .column {
+    flex: 50%;
+    padding: 10px;
+  }
+
+  .row {
+    padding-bottom: 0px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .grid {
+    margin-top: 260px;
+    margin-left: 15%;
+    max-width: 67%;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: rgb(174, 229, 240);
+    background-image: radial-gradient(rgb(255, 234, 246) 5%, transparent 5%), radial-gradient(rgb(226, 255, 245) 5%, transparent 5%);
+    background-position: 0 0, 200px 200px;
+    background-size: 400px 400px;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+
+  .row {
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  h2 {
+    font-size: 1.7vw;
+  }
+
+  .grid {
+    margin-top: 30vw;
+    margin-left: 15%;
+    max-width: 67%;
+  }
+}
